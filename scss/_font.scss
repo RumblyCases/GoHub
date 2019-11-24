@@ -1,0 +1,21 @@
+@font-face {
+  font-family: 'Brown';
+  src: url('Brown-BoldAlt.eot');
+  src: local('Brown-BoldAlt'),
+      url('Brown-BoldAlt.eot?#iefix') format('embedded-opentype'),
+      url('Brown-BoldAlt.woff') format('woff'),
+      url('Brown-BoldAlt.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+@font-face {
+	font-family: 'Myriad Pro';
+	src: url('MyriadPro-Cond.eot');
+	src: local('Myriad Pro Condensed'), local('MyriadPro-Cond'),
+		url('MyriadPro-Cond.eot?#iefix') format('embedded-opentype'),
+		url('MyriadPro-Cond.woff') format('woff'),
+		url('MyriadPro-Cond.ttf') format('truetype');
+	font-weight: normal;
+	font-style: normal;
+}

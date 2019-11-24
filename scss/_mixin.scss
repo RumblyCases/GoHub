@@ -1,0 +1,10 @@
+@mixin ul-specific {
+  list-style-type: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+@mixin a-specific {
+  text-decoration: none;  
+}
