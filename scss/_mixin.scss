@@ -8,3 +8,14 @@
 @mixin a-specific {
   text-decoration: none;  
 }
+
+@mixin btn-specific {
+  color: #fff; 
+  background-color: $color-btn;
+  -webkit-box-shadow: 0 0 5px #e1dafc;
+  box-shadow: 0 0 5px #e1dafc;
+  border-radius: 3px;
+  font-family: 'Brown', sans-serif;
+  font-weight: bold;
+}
+

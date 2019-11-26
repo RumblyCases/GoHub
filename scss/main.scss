@@ -2,46 +2,117 @@
 @import '_font';
 @import '_variables';
 @import '_mixin';
+@import '_adapted';
 
 .wrapper {
   max-width: 1235px;
   margin: 0 auto;
+}
+a{
+  @include a-specific;
 }
 
 main {
   background: url(../img/header-bg.png) top center / cover;
   max-height: 1900px;
   .header {
-    padding-top: 50px;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    -webkit-box-pack: justify;
-    -ms-flex-pack: justify;
-    justify-content: space-between;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    align-items: center;
+      padding-top: 50px;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+      justify-content: space-between;
+      -webkit-box-align: center;
+      -ms-flex-align: center;
+      align-items: center;
+    
+    ul {
+      @include ul-specific;
+      font-family: 'Brown', sans-serif;
+        li { 
+          font-size: 19px;
+          font-weight: bold;
+          margin-left: 50px;
+        }
+        a {   
+          @include a-specific;       
+          color: $color-title;
+        }
+        .btn-sign-in {
+          @include btn-specific;
+          padding: 7px 20px;
+      }
+    }
   }
-  ul {
-    @include ul-specific;
-    font-family: 'Brown', sans-serif;
-      li { 
+  .main-info {
+    h1 {
+      font-family: 'Brown', sans-serif;
+      color: $color-title;
+      font-size: 48px;
+      margin-top: 290px;
+    }
+    p {
+      font-family: 'Myriad', sans-serif;
+      color: $main-p-color;
+      font-weight: 500;
+      font-size: 23px;
+      margin-top: 60px;
+    }
+    .get-talk {
+      margin-top: 80px;
+      .btn-get-started {
+        @include btn-specific;
+        padding: 15px 25px;
+      }
+      .talk {
+        color: $color-title;
+        margin-left: 35px;
+        font-family: 'Brown', sans-serif;
         font-size: 19px;
-        font-weight: bold;
-        margin-left: 50px;
       }
-      a {   
-        @include a-specific;       
-        color: #32325d;
+    }
+  }
+  .main-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 400px;
+    .improve-item{
+      display: inline-block;
+      margin-top: 300px;
+      h2 {
+        font-family: 'Brown', sans-serif;
+        color: $color-title;
+        font-size: 48px;
       }
-      .btn-sign-in {
-        color: #fff; 
-        background-color: #845cff;
-        padding: 7px 20px;
-        -webkit-box-shadow: 0 0 5px #e1dafc;
-        box-shadow: 0 0 5px #e1dafc;
-        border-radius: 3px;
+      p {
+        font-family: 'Brown', sans-serif;
+        color: $main-p-color;
+        font-weight: 500;
+        font-size: 23px;
+        margin-top: 30px;
+      }
+    }
+    .item {
+      display: inline-block;
+      margin-top: 80px;
+      padding: 50px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: -5px 2px 6px 0px #f9f9fe;/* rgb(150, 150, 150) */    
+      h3 {
+        font-family: 'Brown', sans-serif;
+        color: $color-title;
+        font-size: 30px;
+        margin-top: 55px;
+      }
+      p {
+        font-family: 'Brown', sans-serif;
+        color: $main-p-color;
+        font-size: 18px;
+        margin-top: 30px;
+      }
     }
   }
 }

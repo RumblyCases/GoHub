@@ -20,9 +20,44 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-weight: normal;
   font-style: normal; }
 
+@media (max-width: 1024px) {
+  .main-info {
+    text-align: center;
+    height: 100vh; }
+  .main-items {
+    text-align: center; }
+    .main-items .improve-item {
+      flex: 100%; }
+    .main-items .item {
+      flex: 100%; } }
+
+@media (max-width: 910px) {
+  .header .logo {
+    margin: 0 auto; }
+  .header ul {
+    position: absolute;
+    top: -999999px; } }
+
+@media (max-width: 425px) {
+  main .main-info {
+    height: 100vh; }
+    main .main-info h1 {
+      font-size: 40px; }
+    main .main-info p {
+      font-size: 20px; }
+    main .main-info .get-talk {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center; }
+      main .main-info .get-talk .line-talk {
+        margin-top: 75px; } }
+
 .wrapper {
   max-width: 1235px;
   margin: 0 auto; }
+
+a {
+  text-decoration: none; }
 
 main {
   background: url(../img/header-bg.png) top center/cover;
@@ -38,25 +73,90 @@ main {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-  main ul {
-    list-style-type: none;
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: flex;
-    font-family: 'Brown', sans-serif; }
-    main ul li {
-      font-size: 19px;
-      font-weight: bold;
-      margin-left: 50px; }
-    main ul a {
-      text-decoration: none;
-      color: #32325d; }
-    main ul .btn-sign-in {
+    main .header ul {
+      list-style-type: none;
+      display: -webkit-box;
+      display: -ms-flexbox;
+      display: flex;
+      font-family: 'Brown', sans-serif; }
+      main .header ul li {
+        font-size: 19px;
+        font-weight: bold;
+        margin-left: 50px; }
+      main .header ul a {
+        text-decoration: none;
+        color: #32325d; }
+      main .header ul .btn-sign-in {
+        color: #fff;
+        background-color: #845cff;
+        -webkit-box-shadow: 0 0 5px #e1dafc;
+        box-shadow: 0 0 5px #e1dafc;
+        border-radius: 3px;
+        font-family: 'Brown', sans-serif;
+        font-weight: bold;
+        padding: 7px 20px; }
+  main .main-info h1 {
+    font-family: 'Brown', sans-serif;
+    color: #32325d;
+    font-size: 48px;
+    margin-top: 290px; }
+  main .main-info p {
+    font-family: 'Myriad', sans-serif;
+    color: #525f7f;
+    font-weight: 500;
+    font-size: 23px;
+    margin-top: 60px; }
+  main .main-info .get-talk {
+    margin-top: 80px; }
+    main .main-info .get-talk .btn-get-started {
       color: #fff;
       background-color: #845cff;
-      padding: 7px 20px;
       -webkit-box-shadow: 0 0 5px #e1dafc;
       box-shadow: 0 0 5px #e1dafc;
-      border-radius: 3px; }
+      border-radius: 3px;
+      font-family: 'Brown', sans-serif;
+      font-weight: bold;
+      padding: 15px 25px; }
+    main .main-info .get-talk .talk {
+      color: #32325d;
+      margin-left: 35px;
+      font-family: 'Brown', sans-serif;
+      font-size: 19px; }
+  main .main-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin-top: 400px; }
+    main .main-items .improve-item {
+      display: inline-block;
+      margin-top: 300px; }
+      main .main-items .improve-item h2 {
+        font-family: 'Brown', sans-serif;
+        color: #32325d;
+        font-size: 48px; }
+      main .main-items .improve-item p {
+        font-family: 'Brown', sans-serif;
+        color: #525f7f;
+        font-weight: 500;
+        font-size: 23px;
+        margin-top: 30px; }
+    main .main-items .item {
+      display: inline-block;
+      margin-top: 80px;
+      padding: 50px;
+      background: #fff;
+      border-radius: 5px;
+      box-shadow: -5px 2px 6px 0px #f9f9fe;
+      /* rgb(150, 150, 150) */ }
+      main .main-items .item h3 {
+        font-family: 'Brown', sans-serif;
+        color: #32325d;
+        font-size: 30px;
+        margin-top: 55px; }
+      main .main-items .item p {
+        font-family: 'Brown', sans-serif;
+        color: #525f7f;
+        font-size: 18px;
+        margin-top: 30px; }
 
 /*# sourceMappingURL=main.css.map */

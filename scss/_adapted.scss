@@ -1,0 +1,53 @@
+//main
+@media (max-width: 1024px) {
+  .main-info {
+    text-align: center;
+    height: 100vh;
+  }
+  .main-items {
+    text-align: center; 
+    .improve-item {
+      flex: 100%;
+    }
+    .item {
+      flex: 100%;
+    }
+  }
+}
+
+@media (max-width: 910px) {
+  .header {
+    .logo {
+      margin: 0 auto;
+    }
+    ul{
+      position: absolute;
+      top: -999999px;
+    }
+  }
+}
+
+@media (max-width: 425px) {
+  main{
+    .main-info {
+      height: 100vh;
+      h1{
+        font-size: 40px;
+      }
+      p{
+        font-size: 20px;
+      }
+      .get-talk{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        .line-talk{
+          margin-top: 75px;
+        }
+      }
+    }
+  } 
+}
+
+//
+
