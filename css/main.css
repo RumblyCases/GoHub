@@ -32,6 +32,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       flex: 100%; } }
 
 @media (max-width: 910px) {
+  .header .btn-burger-menu {
+    top: 0; }
   .header .logo {
     margin: 0 auto; }
   .header ul {
@@ -51,6 +53,47 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
       justify-content: center; }
       main .main-info .get-talk .line-talk {
         margin-top: 75px; } }
+
+.burger-menu .btn-burger-menu {
+  /*     display: none; */
+  position: fixed;
+  width: 80px;
+  height: 80px;
+  background: #fff;
+  border-radius: 50%;
+  z-index: 30; }
+  .burger-menu .btn-burger-menu:hover {
+    filter: brightness(0.7); }
+
+.burger-menu .burger-menu-line,
+.burger-menu .burger-menu-line::after,
+.burger-menu .burger-menu-line::before {
+  position: absolute;
+  width: 40px;
+  height: 6px;
+  background: #32325d; }
+
+.burger-menu .burger-menu-line {
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%); }
+
+.burger-menu .burger-menu-line::after {
+  content: '';
+  top: -12px; }
+
+.burger-menu .burger-menu-line::before {
+  content: '';
+  top: 12px; }
+
+.burger-menu-active .burger-menu-line {
+  background-color: transparent; }
+  .burger-menu-active .burger-menu-line::before {
+    top: 0;
+    transform: rotate(45deg); }
+  .burger-menu-active .burger-menu-line::after {
+    top: 0;
+    transform: rotate(-45deg); }
 
 .wrapper {
   max-width: 1235px;
@@ -85,7 +128,8 @@ main {
         margin-left: 50px; }
       main .header ul a {
         text-decoration: none;
-        color: #32325d; }
+        color: #32325d;
+        z-index: 20; }
       main .header ul .btn-sign-in {
         color: #fff;
         background-color: #845cff;

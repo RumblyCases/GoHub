@@ -3,6 +3,7 @@
 @import '_variables';
 @import '_mixin';
 @import '_adapted';
+@import '_burger';
 
 .wrapper {
   max-width: 1235px;
@@ -26,7 +27,7 @@ main {
       -webkit-box-align: center;
       -ms-flex-align: center;
       align-items: center;
-    
+
     ul {
       @include ul-specific;
       font-family: 'Brown', sans-serif;
@@ -38,6 +39,7 @@ main {
         a {   
           @include a-specific;       
           color: $color-title;
+          z-index: 20;
         }
         .btn-sign-in {
           @include btn-specific;

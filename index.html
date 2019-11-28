@@ -15,8 +15,14 @@
   <div class="wrapper">
     <header class="header">
       <div class="logo"><a href="#"><img src="img/logo.png" alt="logo"></a></div>
+<!---->
+      <div class="burger-menu "> <!--burger-menu-active-->
+        <a href="#" class="btn-burger-menu">
+          <span class="burger-menu-line"></span>
+        </a>
+<!---->
         <nav role="navigation">        
-          <ul>                                                 
+          <ul id="menu">                                                 
             <li><a href="#">Product </a></li>
             <li><a href="#">Customers</a></li>
             <li><a href="#">Pricing</a></li>
@@ -24,6 +30,11 @@
             <li><a href="#" class="btn-sign-in">Sign in</a></li>
           </ul>
         </nav>
+
+        <div class="burger-overlay"></div>
+<!---->
+      </div>
+<!---->             
     </header>
     <div class="main-info">
       <h1>Balance agility with <br> stability!</h1>
@@ -56,6 +67,8 @@
     </div>
   </div>
 </main>
-    
+
+<script src="script/main.js"></script>
+
 </body>
 </html>
