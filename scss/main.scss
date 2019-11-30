@@ -13,9 +13,8 @@ a{
   @include a-specific;
 }
 
-main {
-  background: url(../img/header-bg.png) top center / cover;
-  max-height: 1900px;
+.main {
+  background: url(../img/header-bg.png) no-repeat top center;
   .header {
       padding-top: 50px;
       display: -webkit-box;
@@ -39,7 +38,6 @@ main {
         a {   
           @include a-specific;       
           color: $color-title;
-          z-index: 20;
         }
         .btn-sign-in {
           @include btn-specific;
@@ -76,10 +74,15 @@ main {
     }
   }
   .main-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    margin-top: 400px;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    margin-top: 140px;
     .improve-item{
       display: inline-block;
       margin-top: 300px;
@@ -102,7 +105,8 @@ main {
       padding: 50px;
       background: #fff;
       border-radius: 5px;
-      box-shadow: -5px 2px 6px 0px #f9f9fe;/* rgb(150, 150, 150) */    
+      -webkit-box-shadow: -5px 2px 6px 0px #f9f9fe;
+              box-shadow: -5px 2px 6px 0px #f9f9fe;/* rgb(150, 150, 150) */    
       h3 {
         font-family: 'Brown', sans-serif;
         color: $color-title;
@@ -114,6 +118,63 @@ main {
         color: $main-p-color;
         font-size: 18px;
         margin-top: 30px;
+      }
+    }
+  }
+}
+
+.proof-makes {
+  margin-top: 200px;
+  background: url(../img/proof-makes-section/dg-section-.png) no-repeat bottom center;
+  font-family: 'Brown', sans-serif;
+  font-weight: normal;
+  text-align: center;
+  .proof-makes-txt {
+    h2 {
+      font-size: 48px;
+      color: $color-title;
+    }
+    p {
+      font-size: 20px;
+      color: $main-p-color;
+      letter-spacing: .5px;
+      margin-top: 35px;
+    }
+  }
+  .proof-makes-simple {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-flex: 25%;
+        -ms-flex: 25%;
+            flex: 25%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: flex-end;
+        -ms-flex-align: flex-end;
+            align-items:flex-end;
+    .simple {
+      display: inline-block;
+      width: 300px;
+      height: 250px;
+      text-align: center;
+      margin-top: 175px;
+      h3 {
+        font-size: 20px;
+        color: $color-title;
+        margin-top: 40px;
+      }
+      p {
+        font-size: 15px;
+        color: $main-p-color;
+        margin-top: 15px;
       }
     }
   }

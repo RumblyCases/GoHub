@@ -21,24 +21,64 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
   font-style: normal; }
 
 @media (max-width: 1024px) {
+  .logo {
+    margin-left: 50px; }
   .main-info {
     text-align: center;
     height: 100vh; }
   .main-items {
     text-align: center; }
     .main-items .improve-item {
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
       flex: 100%; }
     .main-items .item {
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
       flex: 100%; } }
 
 @media (max-width: 910px) {
-  .header .btn-burger-menu {
-    top: 0; }
+  .header .btn-toggle-menu {
+    display: block;
+    width: 50px;
+    height: 50px;
+    color: #32325d;
+    border-radius: 50%;
+    -webkit-transition: all .5s ease;
+    transition: all .5s ease;
+    cursor: pointer; }
+  .header .btn-toggle-menu.active {
+    opacity: .3;
+    /*      &::after {
+        content: ('\2716');
+      } */ }
+  .header .dropdown-menu {
+    display: none;
+    /* position: absolute; */
+    left: 85%;
+    top: 25%; }
+  .header .dropdown-menu.show {
+    display: block; }
   .header .logo {
-    margin: 0 auto; }
+    margin-left: 25px; }
   .header ul {
-    position: absolute;
-    top: -999999px; } }
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    align-items: center; }
+    .header ul a {
+      font-size: 10px;
+      cursor: pointer; } }
+
+@media (max-width: 768px) {
+  .header .dropdown-menu {
+    display: none;
+    /* position: absolute; */
+    left: 75%;
+    top: 25%; } }
 
 @media (max-width: 425px) {
   main .main-info {
@@ -48,53 +88,84 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     main .main-info p {
       font-size: 20px; }
     main .main-info .get-talk {
+      display: -webkit-box;
+      display: -ms-flexbox;
       display: flex;
+      -ms-flex-wrap: wrap;
       flex-wrap: wrap;
+      -webkit-box-pack: center;
+      -ms-flex-pack: center;
       justify-content: center; }
       main .main-info .get-talk .line-talk {
-        margin-top: 75px; } }
+        margin-top: 75px; }
+  main .header .dropdown-menu {
+    display: none;
+    /* position: absolute; */
+    left: 70%;
+    top: 25%; } }
 
-.burger-menu .btn-burger-menu {
-  /*     display: none; */
-  position: fixed;
-  width: 80px;
-  height: 80px;
-  background: #fff;
-  border-radius: 50%;
-  z-index: 30; }
-  .burger-menu .btn-burger-menu:hover {
-    filter: brightness(0.7); }
+@media (max-width: 425px) {
+  .proof-makes .proof-makes-simple {
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    justify-content: center; }
+    .proof-makes .proof-makes-simple .simple {
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+      flex: 100%; } }
 
-.burger-menu .burger-menu-line,
-.burger-menu .burger-menu-line::after,
-.burger-menu .burger-menu-line::before {
-  position: absolute;
-  width: 40px;
-  height: 6px;
-  background: #32325d; }
+.btn-toggle-menu {
+  display: none; }
 
-.burger-menu .burger-menu-line {
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%); }
-
-.burger-menu .burger-menu-line::after {
-  content: '';
-  top: -12px; }
-
-.burger-menu .burger-menu-line::before {
-  content: '';
-  top: 12px; }
-
-.burger-menu-active .burger-menu-line {
-  background-color: transparent; }
-  .burger-menu-active .burger-menu-line::before {
-    top: 0;
-    transform: rotate(45deg); }
-  .burger-menu-active .burger-menu-line::after {
-    top: 0;
-    transform: rotate(-45deg); }
-
+/* .burger-menu { 
+  .btn-burger-menu {
+    position: fixed;
+    width: 80px;
+    height: 80px;
+    background: #fff;
+    border-radius: 50%;
+    z-index: 30;
+      &:hover {
+      filter: brightness(0.7);
+    }
+  }
+  .burger-menu-line,
+  .burger-menu-line::after,
+  .burger-menu-line::before {
+    position: absolute;
+    width: 40px;
+    height: 6px;
+    background: $color-title;
+  }
+  .burger-menu-line {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  .burger-menu-line::after{
+    content: '';
+    top: -12px;
+  }
+  .burger-menu-line::before{
+    content: '';
+    top: 12px;
+  }
+}
+.burger-menu-active {
+  .burger-menu-line {
+    background-color:transparent;
+    &::before {
+      top: 0;
+      transform: rotate(45deg);
+    }
+    &::after {
+      top: 0;
+      transform: rotate(-45deg);
+    }
+  }
+} */
 .wrapper {
   max-width: 1235px;
   margin: 0 auto; }
@@ -102,10 +173,9 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
 a {
   text-decoration: none; }
 
-main {
-  background: url(../img/header-bg.png) top center/cover;
-  max-height: 1900px; }
-  main .header {
+.main {
+  background: url(../img/header-bg.png) no-repeat top center; }
+  .main .header {
     padding-top: 50px;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -116,21 +186,20 @@ main {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    main .header ul {
+    .main .header ul {
       list-style-type: none;
       display: -webkit-box;
       display: -ms-flexbox;
       display: flex;
       font-family: 'Brown', sans-serif; }
-      main .header ul li {
+      .main .header ul li {
         font-size: 19px;
         font-weight: bold;
         margin-left: 50px; }
-      main .header ul a {
+      .main .header ul a {
         text-decoration: none;
-        color: #32325d;
-        z-index: 20; }
-      main .header ul .btn-sign-in {
+        color: #32325d; }
+      .main .header ul .btn-sign-in {
         color: #fff;
         background-color: #845cff;
         -webkit-box-shadow: 0 0 5px #e1dafc;
@@ -139,20 +208,20 @@ main {
         font-family: 'Brown', sans-serif;
         font-weight: bold;
         padding: 7px 20px; }
-  main .main-info h1 {
+  .main .main-info h1 {
     font-family: 'Brown', sans-serif;
     color: #32325d;
     font-size: 48px;
     margin-top: 290px; }
-  main .main-info p {
+  .main .main-info p {
     font-family: 'Myriad', sans-serif;
     color: #525f7f;
     font-weight: 500;
     font-size: 23px;
     margin-top: 60px; }
-  main .main-info .get-talk {
+  .main .main-info .get-talk {
     margin-top: 80px; }
-    main .main-info .get-talk .btn-get-started {
+    .main .main-info .get-talk .btn-get-started {
       color: #fff;
       background-color: #845cff;
       -webkit-box-shadow: 0 0 5px #e1dafc;
@@ -161,46 +230,100 @@ main {
       font-family: 'Brown', sans-serif;
       font-weight: bold;
       padding: 15px 25px; }
-    main .main-info .get-talk .talk {
+    .main .main-info .get-talk .talk {
       color: #32325d;
       margin-left: 35px;
       font-family: 'Brown', sans-serif;
       font-size: 19px; }
-  main .main-items {
+  .main .main-items {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
     justify-content: space-between;
-    margin-top: 400px; }
-    main .main-items .improve-item {
+    margin-top: 140px; }
+    .main .main-items .improve-item {
       display: inline-block;
       margin-top: 300px; }
-      main .main-items .improve-item h2 {
+      .main .main-items .improve-item h2 {
         font-family: 'Brown', sans-serif;
         color: #32325d;
         font-size: 48px; }
-      main .main-items .improve-item p {
+      .main .main-items .improve-item p {
         font-family: 'Brown', sans-serif;
         color: #525f7f;
         font-weight: 500;
         font-size: 23px;
         margin-top: 30px; }
-    main .main-items .item {
+    .main .main-items .item {
       display: inline-block;
       margin-top: 80px;
       padding: 50px;
       background: #fff;
       border-radius: 5px;
+      -webkit-box-shadow: -5px 2px 6px 0px #f9f9fe;
       box-shadow: -5px 2px 6px 0px #f9f9fe;
       /* rgb(150, 150, 150) */ }
-      main .main-items .item h3 {
+      .main .main-items .item h3 {
         font-family: 'Brown', sans-serif;
         color: #32325d;
         font-size: 30px;
         margin-top: 55px; }
-      main .main-items .item p {
+      .main .main-items .item p {
         font-family: 'Brown', sans-serif;
         color: #525f7f;
         font-size: 18px;
         margin-top: 30px; }
+
+.proof-makes {
+  margin-top: 200px;
+  background: url(../img/proof-makes-section/dg-section-.png) no-repeat bottom center;
+  font-family: 'Brown', sans-serif;
+  font-weight: normal;
+  text-align: center; }
+  .proof-makes .proof-makes-txt h2 {
+    font-size: 48px;
+    color: #32325d; }
+  .proof-makes .proof-makes-txt p {
+    font-size: 20px;
+    color: #525f7f;
+    letter-spacing: .5px;
+    margin-top: 35px; }
+  .proof-makes .proof-makes-simple {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-flex: 25%;
+    -ms-flex: 25%;
+    flex: 25%;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between;
+    -webkit-box-align: flex-end;
+    -ms-flex-align: flex-end;
+    align-items: flex-end; }
+    .proof-makes .proof-makes-simple .simple {
+      display: inline-block;
+      width: 300px;
+      height: 250px;
+      text-align: center;
+      margin-top: 175px; }
+      .proof-makes .proof-makes-simple .simple h3 {
+        font-size: 20px;
+        color: #32325d;
+        margin-top: 40px; }
+      .proof-makes .proof-makes-simple .simple p {
+        font-size: 15px;
+        color: #525f7f;
+        margin-top: 15px; }
 
 /*# sourceMappingURL=main.css.map */

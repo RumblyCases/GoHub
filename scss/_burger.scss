@@ -1,7 +1,8 @@
-.burger-menu {
-  
+.btn-toggle-menu {
+  display: none;
+}
+/* .burger-menu { 
   .btn-burger-menu {
-/*     display: none; */
     position: fixed;
     width: 80px;
     height: 80px;
@@ -46,4 +47,4 @@
       transform: rotate(-45deg);
     }
   }
-}
+} */

@@ -1,23 +1,7 @@
-function burgerMenu(selector) {
-  let menu = $(selector);
-  let button = menu.find('btn-burger-menu');
-  let links = menu.find('burger-menu-line');
+const btnToggleMenu = document.querySelector('.btn-toggle-menu');
+const dropDownMenu = document.querySelector('.dropdown-menu');
 
-  button.on('click', (e) => {
-    e.preventDefault();
-    toggleMenu();
-  });
-
-  links.on('click', () => toggleMenu());
-
-  function toggleMenu() {
-    menu.toggleClass('burger-menu-active');
-    /* if (menu.hasClass('burger-menu-active')) {
-      $('body').css('overflow', 'hidden');
-    } else {
-      $('body').css('overflow', 'visible');
-    } */
-  }
-}
-
-burgerMenu('.burger-menu');
+btnToggleMenu.addEventListener('click', function() {
+  this.classList.toggle('active');
+  dropDownMenu.classList.toggle('show');
+});
