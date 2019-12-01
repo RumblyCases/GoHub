@@ -122,7 +122,7 @@ a{
     }
   }
 }
-
+/**/
 .proof-makes {
   margin-top: 200px;
   background: url(../img/proof-makes-section/dg-section-.png) no-repeat bottom center;
@@ -179,3 +179,136 @@ a{
     }
   }
 }
+/**/
+.drives {
+  margin-top: 190px;
+  font-family:'Brown', sans-serif;
+  font-weight: normal;
+  .main-drives {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    .drives-txt {
+      h2 {
+        font-size: 48px;
+        color: $color-title;
+      }
+      p {
+        margin-top: 45px;
+        font-size: 23px;
+        color: $main-p-color;
+      }
+      .dv {
+        margin-top: 55px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        h3 {
+          font-size: 30px;
+          color: $color-title;
+          font-weight: 300;
+        }
+        p {
+          margin-top: 0;
+          color: $main-p-color;
+          font-size: 14px;
+        }
+      }
+      .get-talk {
+        margin-top: 55px;        
+        .btn-get-started {
+          text-transform: uppercase;
+          @include btn-specific;
+          padding: 10px 25px;
+        }
+        .talk {
+          color: $color-title;
+          margin-left: 35px;
+          font-family: 'Brown', sans-serif;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+  .second-drives {
+    margin-top: 240px;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-flex: 50%;
+        -ms-flex: 50%;
+            flex: 50%;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    .second-drives-txt {
+      h2 {
+        font-size: 48px;
+        color: $color-title;
+      }
+      p {
+        margin-top: 45px;
+        font-size: 23px;
+        color: $main-p-color;
+      }
+      .dv {
+        margin-top: 55px;
+        display: -webkit-box;
+        display: -ms-flexbox;
+        display: flex;
+        -webkit-box-pack: justify;
+            -ms-flex-pack: justify;
+                justify-content: space-between;
+        h3 {
+          font-size: 30px;
+          color: $color-title;
+          font-weight: 300;
+        }
+        p {
+          margin-top: 0;
+          color: $main-p-color;
+          font-size: 14px;
+        }
+      }
+      .get-talk {
+        margin-top: 55px;        
+        .btn-get-started {
+          text-transform: uppercase;
+          @include btn-specific;
+          padding: 10px 25px;
+        }
+        .talk {
+          color: $color-title;
+          margin-left: 35px;
+          font-family: 'Brown', sans-serif;
+          font-size: 19px;
+        }
+      }
+    }
+  }
+}
+/**/
+
