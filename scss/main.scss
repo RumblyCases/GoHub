@@ -2,7 +2,6 @@
 @import '_font';
 @import '_variables';
 @import '_mixin';
-@import '_adapted';
 @import '_burger';
 
 .wrapper {
@@ -374,3 +373,4 @@ a{
   }
 }
 
+@import '_adapted';
