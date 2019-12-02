@@ -103,7 +103,7 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     left: 70%;
     top: 25%; } }
 
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .proof-makes .proof-makes-simple {
     -ms-flex-wrap: wrap;
     flex-wrap: wrap;
@@ -142,14 +142,25 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .drives img {
       display: none; } }
 
-@media (max-width: 480) {
+@media (max-width: 480px) {
   .drives .main-drives .drives-txt .get-talk {
+    display: -webkit-box;
+    display: -ms-flexbox;
     display: flex;
+    -ms-flex-wrap: wrap;
     flex-wrap: wrap;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: column;
     flex-direction: column; }
     .drives .main-drives .drives-txt .get-talk .btn-get-started {
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
       flex: 100%; }
-    .drives .main-drives .drives-txt .get-talk .talk {
+    .drives .main-drives .drives-txt .get-talk .line-talk {
+      margin-top: 30px;
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
       flex: 100%;
       font-size: 8px; } }
 
@@ -180,8 +191,8 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     .chapter-drive img {
       display: none; } }
 
-@media (max-width: 480) {
-  .drives .second-main-drives .second-drives-txt .get-talk {
+@media (max-width: 480px) {
+  .chapter-drive .second-drives .second-drives-txt .get-talk {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -191,15 +202,20 @@ html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockq
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
-    .drives .second-main-drives .second-drives-txt .get-talk .btn-get-started {
+    .chapter-drive .second-drives .second-drives-txt .get-talk .btn-get-started {
       -webkit-box-flex: 100%;
       -ms-flex: 100%;
       flex: 100%; }
-    .drives .second-main-drives .second-drives-txt .get-talk .talk {
+    .chapter-drive .second-drives .second-drives-txt .get-talk .line-talk {
+      margin-top: 30px;
       -webkit-box-flex: 100%;
       -ms-flex: 100%;
       flex: 100%;
       font-size: 8px; } }
+
+@media (max-width: 1025px) {
+  .auto-pilot .finances .finances-txt h3 {
+    color: red; } }
 
 .btn-toggle-menu {
   display: none; }
@@ -474,8 +490,13 @@ a {
         margin-left: 35px;
         font-family: 'Brown', sans-serif;
         font-size: 19px; }
-  .drives .second-drives {
-    margin-top: 240px;
+
+/**/
+.chapter-drive {
+  margin-top: 190px;
+  font-family: 'Brown', sans-serif;
+  font-weight: normal; }
+  .chapter-drive .second-drives {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -492,14 +513,14 @@ a {
     -webkit-box-align: center;
     -ms-flex-align: center;
     align-items: center; }
-    .drives .second-drives .second-drives-txt h2 {
+    .chapter-drive .second-drives .second-drives-txt h2 {
       font-size: 48px;
       color: #32325d; }
-    .drives .second-drives .second-drives-txt p {
+    .chapter-drive .second-drives .second-drives-txt p {
       margin-top: 45px;
       font-size: 23px;
       color: #525f7f; }
-    .drives .second-drives .second-drives-txt .dv {
+    .chapter-drive .second-drives .second-drives-txt .dv {
       margin-top: 55px;
       display: -webkit-box;
       display: -ms-flexbox;
@@ -507,17 +528,17 @@ a {
       -webkit-box-pack: justify;
       -ms-flex-pack: justify;
       justify-content: space-between; }
-      .drives .second-drives .second-drives-txt .dv h3 {
+      .chapter-drive .second-drives .second-drives-txt .dv h3 {
         font-size: 30px;
         color: #32325d;
         font-weight: 300; }
-      .drives .second-drives .second-drives-txt .dv p {
+      .chapter-drive .second-drives .second-drives-txt .dv p {
         margin-top: 0;
         color: #525f7f;
         font-size: 14px; }
-    .drives .second-drives .second-drives-txt .get-talk {
+    .chapter-drive .second-drives .second-drives-txt .get-talk {
       margin-top: 55px; }
-      .drives .second-drives .second-drives-txt .get-talk .btn-get-started {
+      .chapter-drive .second-drives .second-drives-txt .get-talk .btn-get-started {
         text-transform: uppercase;
         color: #fff;
         background-color: #845cff;
@@ -527,12 +548,56 @@ a {
         font-family: 'Brown', sans-serif;
         font-weight: bold;
         padding: 10px 25px; }
-      .drives .second-drives .second-drives-txt .get-talk .talk {
+      .chapter-drive .second-drives .second-drives-txt .get-talk .talk {
         color: #32325d;
         margin-left: 35px;
         font-family: 'Brown', sans-serif;
         font-size: 19px; }
 
 /**/
+.auto-pilot {
+  background: url(../img/laptop-hero.png) no-repeat right top;
+  margin-top: 230px;
+  font-family: 'Brow', sans-serif; }
+  .auto-pilot .finances {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+    flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+    -ms-flex-direction: row;
+    flex-direction: row;
+    -webkit-box-pack: justify;
+    -ms-flex-pack: justify;
+    justify-content: space-between; }
+    .auto-pilot .finances .finances-txt h3 {
+      font-size: 48px;
+      color: #32325d; }
+    .auto-pilot .finances .finances-txt p {
+      margin-top: 38px;
+      font-size: 23px;
+      color: #525f7f; }
+    .auto-pilot .finances .simple-list {
+      margin-top: 120px; }
+      .auto-pilot .finances .simple-list h4 {
+        font-size: 30px;
+        color: #32325d;
+        font-weight: 600; }
+      .auto-pilot .finances .simple-list ul li {
+        list-style-type: none;
+        font-size: 20px;
+        font-weight: 600;
+        color: #525f7f;
+        margin-top: 40px; }
+        .auto-pilot .finances .simple-list ul li::before {
+          content: url(../img/shape.png);
+          margin-right: 10px; }
+    .auto-pilot .finances .sl-full-line {
+      -webkit-box-flex: 100%;
+      -ms-flex: 100%;
+      flex: 100%;
+      margin-top: 170px; }
 
 /*# sourceMappingURL=main.css.map */

@@ -19,7 +19,7 @@
               flex: 100%;
     }
   }
-}
+};
 @media (max-width: 910px) {
   .header {
     .btn-toggle-menu {
@@ -65,7 +65,7 @@
       }
     }
   }
-}
+};
 @media (max-width: 768px) {
   .header {
     .dropdown-menu {
@@ -75,7 +75,7 @@
       top: 25%;
     }
   }
-} 
+};
 @media (max-width: 600px) {
   main{
     .main-info {
@@ -109,10 +109,10 @@
       }
     }
   } 
-}
+};
 
 //proof-makes
-@media (max-width: 425px) {
+@media (max-width: 600px) {
   .proof-makes {
     .proof-makes-simple {
       -ms-flex-wrap: wrap;
@@ -127,7 +127,7 @@
       }
     }
   }
-}
+};
 
 //drives
 @media (max-width: 1200px) {
@@ -159,28 +159,38 @@
     }
     img { display: none;}
   }
-}
-@media (max-width: 480) {
+};
+@media (max-width: 480px) {
   .drives {
     .main-drives {
       .drives-txt {
         .get-talk {
+          display: -webkit-box;
+          display: -ms-flexbox;
           display: flex;
-          flex-wrap: wrap;
-          flex-direction: column;
+          -ms-flex-wrap: wrap;
+              flex-wrap: wrap;
+          -webkit-box-orient: vertical;
+          -webkit-box-direction: normal;
+              -ms-flex-direction: column;
+                  flex-direction: column;
           .btn-get-started {
-            flex: 100%;
+            -webkit-box-flex: 100%;
+                -ms-flex: 100%;
+                    flex: 100%;
           }
-          .talk {
-            flex: 100%;
+          .line-talk {
+            margin-top: 30px;
+            -webkit-box-flex: 100%;
+                -ms-flex: 100%;
+                    flex: 100%;
             font-size: 8px;
           }
         }
       }
     }
   }
-}
-
+};
 
 //second-drives
 @media (max-width: 1200px) {
@@ -212,10 +222,10 @@
     }
     img { display: none;}
   }
-}
-@media (max-width: 480) {
-  .drives {
-    .second-main-drives {
+};
+@media (max-width: 480px) {
+  .chapter-drive {
+    .second-drives {
       .second-drives-txt {
         .get-talk {
           display: -webkit-box;
@@ -232,12 +242,26 @@
                 -ms-flex: 100%;
                     flex: 100%;
           }
-          .talk {
+          .line-talk {
+            margin-top: 30px;
             -webkit-box-flex: 100%;
                 -ms-flex: 100%;
                     flex: 100%;
             font-size: 8px;
           }
+        }
+      }
+    }
+  }
+};
+
+//auto-pilot
+@media (max-width: 1025px) {
+  .auto-pilot {
+    .finances {
+      .finances-txt {
+        h3 {
+          color: red;
         }
       }
     }

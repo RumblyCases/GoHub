@@ -245,9 +245,14 @@ a{
         }
       }
     }
-  }
+  } 
+}
+/**/
+.chapter-drive {
+  margin-top: 190px;
+  font-family:'Brown', sans-serif;
+  font-weight: normal;
   .second-drives {
-    margin-top: 240px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -311,4 +316,61 @@ a{
   }
 }
 /**/
+.auto-pilot {
+  background: url(../img/laptop-hero.png) no-repeat right top;
+  margin-top: 230px;
+  font-family:'Brow', sans-serif;
+  .finances {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -ms-flex-wrap: wrap;
+        flex-wrap: wrap;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: row;
+            flex-direction: row;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    .finances-txt {
+      h3 {
+        font-size: 48px;
+        color: $color-title;
+      }
+      p {
+        margin-top: 38px;
+        font-size: 23px;
+        color: $main-p-color;
+      }
+    }
+    .simple-list {
+      margin-top: 120px;
+      h4 {
+        font-size: 30px;
+        color: $color-title;
+        font-weight: 600;
+      }
+      ul {
+        li {
+          list-style-type: none;
+          font-size: 20px;
+          font-weight: 600;
+          color: $main-p-color;
+          margin-top: 40px;
+          &::before {
+            content: url(../img/shape.png);
+            margin-right: 10px;
+          }
+        }
+      }
+    }
+    .sl-full-line {
+      -webkit-box-flex: 100%;
+          -ms-flex: 100%;
+              flex: 100%;
+      margin-top: 170px;
+    }
+  }
+}
 
